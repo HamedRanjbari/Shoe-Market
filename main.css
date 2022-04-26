@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+}
+body{
+  overflow: hidden;
+  background-color: rgb(0, 166, 208);
+  color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  text-align: center;
+  font-size: 16px;
+  flex-wrap: wrap;
+}
+.product{
+  width: 28%;
+  background-color: #fff;
+  margin: 0 2rem;
+  padding: 2rem 2rem;
+  border-radius: 20px;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.9) 0px 50px 100px -20px, rgba(0, 0, 0, 0.9) 0px 30px 60px -30px, rgba(10, 37, 64, 0.9) 0px -2px 6px 0px inset;
+}
+.product h1{
+  margin-bottom: 1rem;
+}
+.info{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+.info a{
+  border: 0;
+  background-color: rgb(0, 166, 208);
+  color: antiquewhite;
+  font-weight: 700;
+  padding: .7rem 2rem;
+  border-radius: 10px;
+  transition: all .5s ease-in-out;
+  cursor: pointer;
+}
+.info a:hover{
+  background-color: rgb(0, 109, 137);
+}
+.product img{
+  height: 350px;
+  border-radius: 20px;
+  margin: 2rem 0;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px, rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.2) 0px 4px 8px, rgba(0, 0, 0, 0.2) 0px 8px 16px, rgba(0, 0, 0, 0.2) 0px 16px 32px, rgba(0, 0, 0, 0.2) 0px 32px 64px;
+}
+@media screen and (max-width: 1400px) {
+  .product{
+    width: 29%;
+    padding: 1rem 1rem;
+    margin: 0 1rem;
+  }
+  .product img{
+    width: 230px;
+    height: 230px;
+  }
+  .product h1{
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  body{
+    overflow-y: scroll;
+    height: auto;
+  }
+  .container{
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .product{
+    width: 70%;
+    margin: 2rem;
+  }
+  .product small{
+    overflow: hidden;
+    width: 100%;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  .product img{
+    height: 180px;
+    width: 180px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .product h1{
+    font-size: 1.2rem;
+  }
+  .product small{
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+  .product img{
+    height: 120px;
+    width: 120px;
+  }
+  .info button{
+    padding: .7rem 1rem;
+  }
+}

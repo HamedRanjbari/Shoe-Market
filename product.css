@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow: hidden;
+}
+a{
+  text-decoration: none;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(0, 151, 141);
+}
+header {
+  width: 100vw;
+  height: 5vh;
+  margin: 2rem 0 3rem 3rem;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+header i {
+  font-size: 2.2rem;
+  transition: all 0.6s ease-in-out;
+  cursor: pointer;
+}
+header i:hover {
+  color: antiquewhite;
+  transform: scale(1.2);
+}
+main {
+  margin: auto;
+  width: 80%;
+  height: 70vh;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: antiquewhite;
+  border-radius: 30px;
+  box-shadow: rgba(50, 50, 93, 0.9) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.9) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.9) 0px -2px 6px 0px inset;
+}
+main img {
+  width: 500px;
+  height: 500px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px, rgba(0, 0, 0, 0.2) 0px 2px 4px,
+    rgba(0, 0, 0, 0.2) 0px 4px 8px, rgba(0, 0, 0, 0.2) 0px 8px 16px,
+    rgba(0, 0, 0, 0.2) 0px 16px 32px, rgba(0, 0, 0, 0.2) 0px 32px 64px;
+}
+.main-text {
+  width: 40%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.main-text small {
+  text-align: justify;
+  margin: 3rem 0;
+  width: 80%;
+}
+.order {
+  width: 80%;
+  height: 20%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.order input {
+  height: 40px;
+  width: 60px;
+  border: 1px solid rgba(117, 159, 206, 0.486);
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  font-size: 1.3rem;
+  text-align: center;
+  caret-color: rgb(187, 0, 53);
+}
+.order input:focus {
+  outline: 0;
+}
+.order i {
+  font-size: 1.5rem;
+  color: black;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.order i:hover {
+  transform: scale(1.2);
+}
+.order button {
+  padding: 0.7rem 3rem;
+  border-radius: 10px;
+  border: rgb(0, 151, 141) solid 2px;
+  color: rgb(0, 151, 141);
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+.order button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 151, 141);
+}
+@media screen and (max-width: 1200px) {
+  main {
+    height: 70vh;
+    position: relative;
+  }
+  main img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 450px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .main-text {
+    margin-top: 30rem;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-text small {
+    overflow: hidden;
+    width: 100%;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+  }
+  .order{
+    width: 60%;
+  }
+  .order button{
+    padding: .5rem 2rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  main{
+    height: 70vh;
+  }
+  main img {
+    height: 250px;
+    width: 400px;
+    margin: 3rem auto;
+  }
+  .main-text {
+    margin-top: 20rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  main img {
+    width: 250px;
+  }
+  .main-text {
+    width: 90%;
+    height: 80%;
+  }
+}
+@media screen and (max-width: 500px) {
+  main {
+    width: 90vw;
+  }
+  main img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin: 1rem auto;
+  }
+  .main-text{
+    margin-top: 13rem;
+  }
+  .order{
+    width: 100%;
+  }
+  .order button {
+    font-size: 1rem;
+    font-weight: 200;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+  }
+}
